@@ -777,7 +777,8 @@ a {
       right: 0; }
   .slider__image {
     width: 860px;
-    height: 490px; }
+    height: 490px;
+    opacity: 0.2; }
     .slider__image--first {
       width: 800px;
       height: 525px; }
