@@ -558,8 +558,8 @@ a {
 @media (min-width: 1440px) {
   .header {
     padding: 35px;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.01)), color-stop(50%, rgba(0, 0, 0, 0.04)), color-stop(50%, transparent), to(transparent));
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.04) 50%, transparent 50%, transparent 100%); }
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.01)), color-stop(50%, rgba(0, 0, 0, 0.04)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.04) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%); }
   .header__navigation {
     position: relative;
     width: 1280px;
@@ -679,8 +679,8 @@ a {
       right: 50%;
       width: 600px;
       height: 615px;
-      background: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.04)));
-      background: linear-gradient(to right, white 0%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.04) 100%); }
+      background: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, rgba(255, 255, 255, 0.1)), to(rgba(0, 0, 0, 0.01)));
+      background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.01) 100%); }
   .introduction__header {
     position: absolute;
     top: 50%;
