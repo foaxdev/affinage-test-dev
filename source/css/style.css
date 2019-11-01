@@ -670,8 +670,8 @@ a {
   .introduction {
     padding-top: 70px;
     padding-bottom: 125px;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.01)), color-stop(50%, rgba(0, 0, 0, 0.04)), color-stop(50%, transparent), to(transparent));
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.04) 50%, transparent 50%, transparent 100%); }
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.01)), color-stop(50%, rgba(0, 0, 0, 0.04)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.04) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%); }
     .introduction::before {
       position: absolute;
       content: "";
@@ -821,13 +821,21 @@ a {
   .slider__image--first {
     opacity: 0.2; }
 
-.slider__image--first-animation {
-  -webkit-animation: bounce-left 1.5s ease-in-out;
-          animation: bounce-left 1.5s ease-in-out; }
+.slider__image--first-animation-fast {
+  -webkit-animation: bounce-left 1s ease-in-out;
+          animation: bounce-left 1s ease-in-out; }
 
-.slider__image--second-animation {
-  -webkit-animation: bounce-right 1s ease-in;
-          animation: bounce-right 1s ease-in; }
+.slider__image--second-animation-fast {
+  -webkit-animation: bounce-right 1s ease-in-out;
+          animation: bounce-right 1s ease-in-out; }
+
+.slider__image--first-animation-slow {
+  -webkit-animation: bounce-left 3s ease-in;
+          animation: bounce-left 3s ease-in; }
+
+.slider__image--second-animation-slow {
+  -webkit-animation: bounce-right 3s ease-in;
+          animation: bounce-right 3s ease-in; }
 
 .slider__text {
   display: none; }
@@ -849,7 +857,7 @@ a {
     .slider__image-wrap--top {
       top: -70px;
       left: 0;
-      clip: initial; }
+      clip: auto; }
     .slider__image-wrap--bottom {
       position: absolute;
       bottom: 0;
@@ -943,7 +951,7 @@ a {
   .number__sub-digit {
     position: absolute;
     bottom: -5px;
-    right: 55px;
+    right: 50px;
     display: block;
     margin: 0;
     font-family: "Geometria", "Arial", sans-serif;

@@ -58,12 +58,20 @@
   }
 }
 
-.slider__image--first-animation {
-  animation: bounce-left 1.5s ease-in-out;
+.slider__image--first-animation-fast {
+  animation: bounce-left 1s ease-in-out;
 }
 
-.slider__image--second-animation {
-  animation: bounce-right 1s ease-in;
+.slider__image--second-animation-fast {
+  animation: bounce-right 1s ease-in-out;
+}
+
+.slider__image--first-animation-slow {
+  animation: bounce-left 3s ease-in;
+}
+
+.slider__image--second-animation-slow {
+  animation: bounce-right 3s ease-in;
 }
 
 .slider__text {
@@ -98,7 +106,7 @@
       top: -70px;
       left: 0;
 
-      clip: initial;
+      clip: auto;
     }
 
     &--bottom {
