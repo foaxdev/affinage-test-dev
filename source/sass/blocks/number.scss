@@ -24,3 +24,54 @@
   line-height: 24px;
   letter-spacing: 0.1em;
 }
+
+.number__sub-digit {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .number {
+    bottom: 35px;
+    right: 238px;
+
+    justify-content: flex-start;
+    width: 138px;
+    height: 383px;
+    padding: 15px 20px;
+
+    background: $yellow;
+  }
+
+  .number__main-digit {
+    font-size: 45px;
+    line-height: 66px;
+  }
+
+  .number__sub-digit {
+    position: absolute;
+    bottom: -5px;
+    right: 55px;
+
+    display: block;
+    margin: 0;
+
+    font-family: "Geometria", "Arial", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 56px;
+    letter-spacing: 0.1em;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 11px;
+      left: 0;
+
+      width: 17px;
+      height: 3px;
+
+      background-color: $black;
+    }
+  }
+}

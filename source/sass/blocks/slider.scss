@@ -36,7 +36,7 @@
 .slider__image-wrap {
   background-color: $yellow;
 
-  &--small {
+  &--top {
     position: absolute;
     top: 0;
     left: -50px;
@@ -58,9 +58,13 @@
   }
 }
 
+.slider__text {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .slider__image-wrap {
-    &--small {
+    &--top {
       top: -300px;
 
       clip: rect(0, 490px, 300px, 50px);
@@ -75,5 +79,70 @@
       width: 490px;
       height: auto;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__image-wrap {
+    max-width: 860px;
+
+    &--top {
+      top: -70px;
+      left: 0;
+
+      clip: initial;
+    }
+
+    &--bottom {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .slider__image {
+    width: 860px;
+    height: 490px;
+
+    &--first {
+      width: 800px;
+      height: 525px;
+    }
+  }
+
+  .slider__button {
+    &--next {
+      right: 195px;
+      top: 260px;
+    }
+
+    &--previous {
+      left: 855px;
+      top: 260px;
+    }
+  }
+
+  .slider__text {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 3px 24px 0 24px;
+
+    font-family: "Geometria", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: $white;
+    text-transform: uppercase;
+
+    border-radius: 50%;
+    border: 1px solid $black;
   }
 }

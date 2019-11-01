@@ -17,18 +17,20 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="header">
+    <a class="header__link" href="/">
+      <svg class="header__logo" width="23" height="25"><use xlink:href="#icon-logo"></use></svg>
+    </a>
     <nav class="header__navigation">
-      <a class="header__link" href="/">
-        <svg class="header__logo" width="23" height="25"><use xlink:href="#icon-logo"></use></svg>
-      </a>
       <button class="header__toggle-button">
         Открыть или закрыть меню
         <svg width="20" height="14"><use xlink:href="#icon-menu"></use></svg>
+        <svg class="header__ring" width="54" height="54"><use xlink:href="#icon-ring"></use></svg>
       </button>
     </nav>
   </header>
   <main class="main">
     <section class="introduction">
+      <p class="introduction__note">тестовое задание</p>
       <h1 class="introduction__header">Affinage</h1>
       <svg class="introduction__rect"><use xlink:href="#icon-rect"></use></svg>
       <div class="introduction__wrap">
@@ -38,24 +40,26 @@
           <p class="age__letter age__letter--e">e</p>
         </div>
         <b class="introduction__tagline">очень хороший слоган</b>
+        <p class="introduction__number">51</p>
         <div class="slider">
           <button class="slider__button slider__button--previous" type="button">
             Предыдущее фото
             <svg width="20" height="36"><use xlink:href="#icon-previous"></use></svg>
           </button>
-          <div class="slider__image-wrap slider__image-wrap--small">
+          <div class="slider__image-wrap slider__image-wrap--top">
             <picture>
               <source class="js-slider-first-webp" type="image/webp" srcset="img/lisbon@1x.webp 1x, img/lisbon@2x.webp 2x">
 
               <img class="slider__image slider__image--first" src="img/lisbon@1x.jpg" srcset="img/lisbon@2x.jpg 2x" alt="Фотография архитектуры Лисбона">
             </picture>
           </div>
-          <div class="slider__image-wrap">
+          <div class="slider__image-wrap slider__image-wrap--bottom">
             <picture>
               <source class="js-slider-second-webp" type="image/webp" srcset="img/ural@1x.webp 1x, img/ural@2x.webp 2x">
 
               <img class="slider__image slider__image--second" src="img/ural@1x.jpg" srcset="img/ural@2x.jpg 2x" alt="Фотография мотоцикла Урал">
             </picture>
+            <b class="slider__text">Ural 03</b>
           </div>
           <button class="slider__button slider__button--next" type="button">
             Следующее фото
@@ -65,11 +69,16 @@
         <svg class="introduction__outline-triangle" width="24" height="24"><use xlink:href="#icon-outline-triangle"></use></svg>
         <svg class="introduction__triangle" width="24" height="24"><use xlink:href="#icon-black-triangle"></use></svg>
         <div class="introduction__ring">
-          <svg width="110" height="110"><use xlink:href="#icon-ring"></use></svg>
+          <svg><use xlink:href="#icon-ring"></use></svg>
         </div>
         <div class="number">
           <p class="number__main-digit">13</p>
+          <p class="number__sub-digit">7</p>
         </div>
+      </div>
+      <div class="introduction__affinage-wrap">
+        <svg class="introduction__affin" width="347" height="113"><use xlink:href="#icon-affin"></use></svg>
+        <svg class="introduction__age" width="293" height="62"><use xlink:href="#icon-age"></use></svg>
       </div>
     </section>
   </main>

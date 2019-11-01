@@ -16,7 +16,9 @@
   font-style: normal;
   font-size: 60px;
   line-height: 72px;
+  color: transparent;
   text-transform: uppercase;
+  -webkit-text-stroke: 1px $black;
 
   &--a {
     bottom: 315px;
@@ -46,5 +48,37 @@
 
   .age__letter {
     font-size: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .age {
+    top: -170px;
+    right: 0;
+    left: unset;
+  }
+
+  .age__letter {
+    font-size: 80px;
+    line-height: 117px;
+
+    &--a {
+      bottom: 340px;
+      left: 230px;
+    }
+
+    &--g {
+      left: 300px;
+      bottom: 195px;
+
+      clip: rect(0, 72px, 64px, 0);
+    }
+
+    &--e {
+      left: 390px;
+      bottom: 270px;
+
+      clip: rect(0, 72px, 67px, 0);
+    }
   }
 }

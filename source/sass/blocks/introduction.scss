@@ -24,6 +24,10 @@
   transform: rotate(-90deg);
 }
 
+.introduction__number {
+  display: none;
+}
+
 .introduction__ring {
   position: absolute;
   left: 50%;
@@ -33,6 +37,11 @@
   margin-left: -55px;
 
   clip: rect(0, 110px, 55px, 0);
+
+  & svg {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 .introduction__outline-triangle {
@@ -58,9 +67,38 @@
   height: 177px;
 }
 
+.introduction__note {
+  display: none;
+}
+
+.introduction__affin,
+.introduction__age {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .introduction {
     padding-top: 340px;
+  }
+
+  .introduction__note {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    display: block;
+
+    margin: -55px 0 0 0;
+
+    font-family: "Geometria", "Arial", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.2em;
+    color: $black;
+
+    opacity: 0.4;
+    transform: rotate(-90deg);
   }
 
   .introduction__wrap {
@@ -74,5 +112,162 @@
     right: 0;
 
     width: 280px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .introduction {
+    padding-top: 70px;
+    padding-bottom: 125px;
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.04) 50%, transparent 50%, transparent 100%);
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 50%;
+
+      width: 600px;
+      height: 615px;
+
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.04) 100%);
+    }
+  }
+
+  .introduction__header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    z-index: 2;
+
+    margin: -140px 0 0 -495px;
+
+    font-size: 140px;
+    line-height: 157px;
+    letter-spacing: 0.3em;
+    color: $white;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+
+      width: 15px;
+      height: 15px;
+
+      font-family: "Geometria", "Arial", sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: normal;
+      color: $black;
+    }
+
+    &::before {
+      content: "(1)";
+      top: -125px;
+    }
+
+    &::after {
+      content: "(3)";
+      top: -45px;
+    }
+  }
+
+  .introduction__wrap {
+    max-width: 1280px;
+  }
+
+  .introduction__tagline {
+    bottom: 180px;
+    left: 205px;
+  }
+
+  .introduction__number {
+    position: absolute;
+    left: 470px;
+    top: -77px;
+    z-index: 1;
+
+    display: block;
+
+    font-family: "Geometria", "Arial", sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 41px;
+    letter-spacing: 0.1em;
+
+    opacity: 0.5;
+    transform: rotate(-90deg);
+  }
+
+  .introduction__rect {
+    top: 220px;
+    left: 50%;
+    z-index: 1;
+
+    width: 282px;
+    margin-left: -420px;
+
+    transform: rotate(-90deg);
+  }
+  .introduction__ring {
+    margin-left: -105px;
+
+    clip: rect(0, 213px, 95px, 0);
+
+    & svg {
+      width: 213px;
+      height: 124px;
+
+      transform: scale(1.2) translateY(10px);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 33px;
+      left: 0;
+
+      width: 213px;
+      height: 10px;
+
+      background-color: $yellow;
+    }
+  }
+
+  .introduction__outline-triangle,
+  .introduction__triangle {
+    display: none;
+  }
+
+  .introduction__affinage-wrap {
+    position: relative;
+
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  .introduction__affin,
+  .introduction__age {
+    position: absolute;
+    bottom: -110px;
+
+    display: block;
+  }
+
+  .introduction__affin {
+    left: 100px;
+    bottom: -130px;
+
+    clip: rect(0, 347px, 108px, 0);
+  }
+
+  .introduction__age {
+    right: 180px;
   }
 }

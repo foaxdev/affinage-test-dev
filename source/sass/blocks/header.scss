@@ -1,13 +1,10 @@
 .header {
-  padding: 15px 20px;
-
-  background-color: $yellow;
-}
-
-.header__navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 20px;
+
+  background-color: $yellow;
 }
 
 .header__toggle-button {
@@ -19,5 +16,43 @@
   &:focus {
     fill: $white;
     outline: none;
+  }
+}
+
+.header__ring {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    padding: 35px;
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.04) 50%, transparent 50%, transparent 100%);
+  }
+
+  .header__navigation {
+    position: relative;
+
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  .header__toggle-button {
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    z-index: 1;
+  }
+
+  .header__ring {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+
+    display: block;
+    margin-right: -27px;
+    margin-top: -27px;
+
+    fill: $grey;
   }
 }

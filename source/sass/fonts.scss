@@ -8,8 +8,32 @@
 
 @font-face {
   font-family: "Geometria";
+  src: url("../fonts/Geometria/Geometria-LightItalic.otf") format("otf");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria/Geometria-Light.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geometria";
   src: url("../fonts/Geometria/Geometria-Medium.otf") format("otf");
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria/Geometria-Heavy.otf") format("otf");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
