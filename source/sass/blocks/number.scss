@@ -1,0 +1,26 @@
+.number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  width: 105px;
+  height: 105px;
+  padding: 20px;
+
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, $yellow 50%, $yellow 100%);
+}
+
+.number__main-digit {
+  margin: 0;
+
+  font-family: "Geometria", "Arial", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+}

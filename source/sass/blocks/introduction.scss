@@ -1,0 +1,78 @@
+.introduction {
+  position: relative;
+
+  padding-top: 40px;
+}
+
+.introduction__header {
+  @include hide-text();
+}
+
+.introduction__tagline {
+  position: absolute;
+  bottom: 320px;
+  left: -20px;
+  z-index: 1;
+
+  display: block;
+
+  font-style: italic;
+  font-size: 9px;
+  line-height: 10px;
+
+  opacity: 0.5;
+  transform: rotate(-90deg);
+}
+
+.introduction__ring {
+  position: absolute;
+  left: 50%;
+  bottom: -59px;
+  z-index: 1;
+
+  margin-left: -55px;
+
+  clip: rect(0, 110px, 55px, 0);
+}
+
+.introduction__outline-triangle {
+  position: absolute;
+  left: 45px;
+  bottom: 30px;
+
+  fill: none;
+}
+
+.introduction__triangle {
+  position: absolute;
+  right: 28px;
+  bottom: 320px;
+}
+
+.introduction__rect {
+  position: absolute;
+  top: -90px;
+  right: 0;
+
+  width: 155px;
+  height: 177px;
+}
+
+@media (min-width: $tablet-width) {
+  .introduction {
+    padding-top: 340px;
+  }
+
+  .introduction__wrap {
+    position: relative;
+
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .introduction__rect {
+    right: 0;
+
+    width: 280px;
+  }
+}

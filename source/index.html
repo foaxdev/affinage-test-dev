@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Affinage</title>
+
+  <link rel="preload" href="fonts/Philosopher/Philosopher-Italic.ttf" as="font">
+  <link rel="preload" href="fonts/Geometria/Geometria-HeavyItalic.otf" as="font">
+  <link rel="preload" href="fonts/Geometria/Geometria-Medium.otf" as="font">
+
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/picturefill.min.js" async></script>
+</head>
+<body>
+  <div class="svg-template">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="header">
+    <nav class="header__navigation">
+      <a class="header__link" href="/">
+        <svg class="header__logo" width="23" height="25"><use xlink:href="#icon-logo"></use></svg>
+      </a>
+      <button class="header__toggle-button">
+        Открыть или закрыть меню
+        <svg width="20" height="14"><use xlink:href="#icon-menu"></use></svg>
+      </button>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="introduction">
+      <h1 class="introduction__header">Affinage</h1>
+      <svg class="introduction__rect"><use xlink:href="#icon-rect"></use></svg>
+      <div class="introduction__wrap">
+        <div class="age">
+          <p class="age__letter age__letter--a">a</p>
+          <p class="age__letter age__letter--g">g</p>
+          <p class="age__letter age__letter--e">e</p>
+        </div>
+        <b class="introduction__tagline">очень хороший слоган</b>
+        <div class="slider">
+          <button class="slider__button slider__button--previous" type="button">
+            Предыдущее фото
+            <svg width="20" height="36"><use xlink:href="#icon-previous"></use></svg>
+          </button>
+          <div class="slider__image-wrap slider__image-wrap--small">
+            <picture>
+              <source class="js-slider-first-webp" type="image/webp" srcset="img/lisbon@1x.webp 1x, img/lisbon@2x.webp 2x">
+
+              <img class="slider__image slider__image--first" src="img/lisbon@1x.jpg" srcset="img/lisbon@2x.jpg 2x" alt="Фотография архитектуры Лисбона">
+            </picture>
+          </div>
+          <div class="slider__image-wrap">
+            <picture>
+              <source class="js-slider-second-webp" type="image/webp" srcset="img/ural@1x.webp 1x, img/ural@2x.webp 2x">
+
+              <img class="slider__image slider__image--second" src="img/ural@1x.jpg" srcset="img/ural@2x.jpg 2x" alt="Фотография мотоцикла Урал">
+            </picture>
+          </div>
+          <button class="slider__button slider__button--next" type="button">
+            Следующее фото
+            <svg width="20" height="36"><use xlink:href="#icon-next"></use></svg>
+          </button>
+        </div>
+        <svg class="introduction__outline-triangle" width="24" height="24"><use xlink:href="#icon-outline-triangle"></use></svg>
+        <svg class="introduction__triangle" width="24" height="24"><use xlink:href="#icon-black-triangle"></use></svg>
+        <div class="introduction__ring">
+          <svg width="110" height="110"><use xlink:href="#icon-ring"></use></svg>
+        </div>
+        <div class="number">
+          <p class="number__main-digit">13</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
