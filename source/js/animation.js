@@ -2,6 +2,9 @@
 
 (() => {
   const TIMEOUT = 2000;
+  const Key = {
+    ENTER: 'Enter'
+  };
 
   const elFirstImage = document.querySelector('.slider__image--first');
   const elFirstWebpImage = document.querySelector('.js-slider-first-webp');
@@ -48,6 +51,22 @@
     replaceImageAddresses();
   });
 
+  const changeImagesFastKeyHandler = window.debounce((evt) => {
+    if (evt.key === Key.ENTER) {
+      changeClassesForAnimation(false);
+      replaceImageAddresses();
+    }
+  });
+
+  const changeImagesSlowKeyHandler = window.debounce((evt) => {
+    if (evt.key === Key.ENTER) {
+      changeClassesForAnimation(true);
+      replaceImageAddresses();
+    }
+  });
+
   elsControlButtons[0].addEventListener('click', changeImagesFastHandler);
+  elsControlButtons[0].addEventListener('keydown', changeImagesFastKeyHandler);
   elsControlButtons[1].addEventListener('click', changeImagesSlowHandler);
+  elsControlButtons[1].addEventListener('keydown', changeImagesSlowKeyHandler);
 })();
