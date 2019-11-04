@@ -1,17 +1,17 @@
 'use strict';
 
 (function () {
-  var INTERVAL = 500;
+  const INTERVAL = 500;
 
-  window.debounce = function (cb) {
-    var lastTimeout = null;
+  window.debounce = (cb) => {
+    let lastTimeout = null;
 
-    return function () {
-      var parameters = arguments;
+    return () => {
+      const parameters = arguments;
       if (lastTimeout) {
         window.clearTimeout(lastTimeout);
       }
-      lastTimeout = window.setTimeout(function () {
+      lastTimeout = window.setTimeout(() => {
         cb.apply(null, parameters);
       }, INTERVAL);
     };
